@@ -1,0 +1,17 @@
+<h1>All Registered Applications</h1>
+
+<%= link_to "New App", new_registered_application_path(@registered_application), class: 'btn btn-success' %>
+
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead"><% @registered_applications.each do |app| %></p>
+      <div class="media">
+        <div class="media-body">  
+          <h4 class="media-heading"> 
+            <%= link_to app.name, app %>
+          </h4>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

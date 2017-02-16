@@ -1,2 +1,7 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Scry</h1>
+
+<% if current_user == nil %>
+  <h3>Sign Up or Sign In to start Scrying</h3>
+<% else current_user != nil %>
+  <h3>Ready to Scry</h3>
+<% end %>
