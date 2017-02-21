@@ -3,11 +3,12 @@ class RegisteredApplicationsController < ApplicationController
   
   def index
     @user = current_user
-    @registered_applications = @user.registered_applications 
+    @registered_applications = @user.registered_applications
   end
 
   def show
     @registered_application = RegisteredApplication.find(params[:id])
+    @events = @registered_application.events.group_by(&:name)
   end
 
   def new

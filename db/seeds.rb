@@ -30,6 +30,14 @@ users = User.all
 end
 registered_applications = RegisteredApplication.all
 
+25.times do
+  Event.create!(
+    registered_application: registered_applications.sample,
+    name: Faker::Hipster.word
+  )
+end
+events = Event.all
+
 # Create Users
 user = User.first
   user.update_attributes!(
@@ -42,3 +50,4 @@ user = User.first
 puts "Seed finished"
 puts "#{User.count} users created"
 puts "#{RegisteredApplication.count} Registered Applications created"
+puts "#{Event.count} events created"

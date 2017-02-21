@@ -4,6 +4,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
 
   let(:user)  { create(:user) }
   let(:app)   { create(:registered_application) }
+  let(:event) { create(:event) }
   
   before do
     sign_in user
