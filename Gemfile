@@ -9,7 +9,6 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -47,5 +46,8 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'figaro'
 gem 'devise'
+gem 'chartkick'
+gem 'groupdate'
+gem 'pg'
  
 
